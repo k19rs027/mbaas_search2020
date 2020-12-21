@@ -110,22 +110,22 @@
     </script>
 </head>
 <body>
-  <h1>mBaaS search</h1>
+  <h1>Book search</h1>
   <div>
     <label for="name">name:</label>
-    <input id="name" type="text" placeholder="monster name">
+    <input id="name" type="text" placeholder="book name">
   </div>
   <div>
-    <label for="level">level:</label>
-    <input id="level" type="number" placeholder="monster level">
+    <label for="level">label:</label>
+    <input id="level" type="number" placeholder="book level">
   </div>
   <div id="button">
     <button class="btn" onclick="fetchAll()">Fetch All</button>
     <button class="btn" onclick="searchName()">Name</button>
     <br>
-    <button class="btn" onclick="searchLevelLT()">Level &lt;</button>
-    <button class="btn" onclick="searchLevel()">Level</button>
-    <button class="btn" onclick="searchLevelGT()">Level &gt;</button>
+    <button class="btn" onclick="searchLevelLT()">Label &lt;</button>
+    <button class="btn" onclick="searchLevel()">Label</button>
+    <button class="btn" onclick="searchLevelGT()">Label &gt;</button>
   </div>
   <div id="message">initializing...</div>
 </body>
