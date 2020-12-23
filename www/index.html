@@ -38,8 +38,6 @@
             newRecord
             .set("name", init_data[i].name)
             .set("level", init_data[i].level)
-            .set("attack", init_data[i].attack)
-            .set("defence", init_data[i].defence)
             .save();
             // bad busy loop...
             let startMsec = new Date();
