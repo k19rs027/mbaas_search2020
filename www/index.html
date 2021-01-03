@@ -126,6 +126,22 @@
       })
     }
 
+     function updateData2(){
+      let name = $("#name").val();
+      let TestDataClass = ncmb.DataStore(db);
+      TestDataClass.equalTo("name",name).fetch()
+      .then(function(TestDataClass){
+        TestDataClass.set("state", "貸出可能")
+        return TestDataClass.update();
+      })
+      .then(function(results){
+        $("#message").html("update success");
+      })
+      .catch(function(error){
+        $("#display").html("update fail:" + JSON.stringify(error));
+      })
+    }
+
     </script>
 </head>
 <body>
