@@ -112,9 +112,8 @@
 
     function updateData(){
       let name = $("#name").val();
-      let level = parseInt($("#level").val(),10);
       let TestDataClass = ncmb.DataStore(db);
-      TestDataClass.equalTo("name",name)&&TestDataClass.equalTo("level",level).fetch()
+      TestDataClass.equalTo("name",name).fetch()
       .then(function(TestDataClass){
         TestDataClass.set("state", "貸出中")
         return TestDataClass.update();
