@@ -110,6 +110,23 @@
       })
     }
 
+    function updateData(){
+      let name = $("#name").val();
+      let level = parseInt($("#level").val(),10);
+      let TestDataClass = ncmb.DataStore(db);
+      TestDataClass.equalTo("name",name)&&TestDataClass.equalTo("level",level).fetch()
+      .then(function(TestDataClass){
+        TestDataClass.set("rent", "貸出中")
+        return TestDataClass.update();
+      })
+      .then(function(results){
+        $("#message").html("update success");
+      })
+      .catch(function(error){
+        $("#display").html("update fail:" + JSON.stringify(error));
+      })
+    }
+
     </script>
 </head>
 <body>
