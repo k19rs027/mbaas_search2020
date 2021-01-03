@@ -25,7 +25,6 @@
       {name: "精霊の守り人", level: 41},
       {name: "闇の守り人", level: 42},
       {name: "夢の守り人", level: 43}
-    
     ];
 
     $(function() {
@@ -38,6 +37,7 @@
             newRecord
             .set("name", init_data[i].name)
             .set("level", init_data[i].level)
+            .set("rent", init_data[i].rent)
             .save();
             // bad busy loop...
             let startMsec = new Date();
@@ -66,6 +66,7 @@
         msg += "<tr>";
         msg += "<td>" + results[i].name + "</td>";
         msg += "<td class='num'>" + results[i].level + "</td>";
+        msg += "<td class='num'>" + results[i].rent + "</td>";
         msg += "</tr>";
       }
       // テーブルのテイラを生成
