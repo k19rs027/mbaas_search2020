@@ -15,16 +15,16 @@
     const db = "SearchTest2";
     // テスト用データを用意
     const init_data = [
-      {name: "獣の奏者1", level: 11, rent: "貸出可能"},
-      {name: "獣の奏者2", level: 12, rent: "貸出可能"},
-      {name: "獣の奏者3", level: 13, rent: "貸出可能"},
-      {name: "獣の奏者4", level: 14, rent: "貸出可能"},
-      {name: "鹿の王　上", level: 21, rent: "貸出可能"},
-      {name: "鹿の王　下", level: 22, rent: "貸出可能"},
-      {name: "狐笛のかなた", level: 31, rent: "貸出可能"},
-      {name: "精霊の守り人", level: 41, rent: "貸出可能"},
-      {name: "闇の守り人", level: 42, rent: "貸出可能"},
-      {name: "夢の守り人", level: 43, rent: "貸出可能"}
+      {name: "獣の奏者1", level: 11, state: "貸出可能"},
+      {name: "獣の奏者2", level: 12, state: "貸出可能"},
+      {name: "獣の奏者3", level: 13, state: "貸出可能"},
+      {name: "獣の奏者4", level: 14, state: "貸出可能"},
+      {name: "鹿の王　上", level: 21, state: "貸出可能"},
+      {name: "鹿の王　下", level: 22, state: "貸出可能"},
+      {name: "狐笛のかなた", level: 31, state: "貸出可能"},
+      {name: "精霊の守り人", level: 41, state: "貸出可能"},
+      {name: "闇の守り人", level: 42, state: "貸出可能"},
+      {name: "夢の守り人", level: 43, state: "貸出可能"}
     ];
 
     $(function() {
@@ -37,7 +37,7 @@
             newRecord
             .set("name", init_data[i].name)
             .set("level", init_data[i].level)
-            .set("rent", init_data[i].rent)
+            .set("state", init_data[i].state)
             .save();
             // bad busy loop...
             let startMsec = new Date();
@@ -66,7 +66,7 @@
         msg += "<tr>";
         msg += "<td>" + results[i].name + "</td>";
         msg += "<td class='num'>" + results[i].level + "</td>";
-        msg += "<td>" + results[i].rent + "</td>";
+        msg += "<td>" + results[i].state + "</td>";
         msg += "</tr>";
       }
       // テーブルのテイラを生成
@@ -116,7 +116,7 @@
       let TestDataClass = ncmb.DataStore(db);
       TestDataClass.equalTo("name",name)&&TestDataClass.equalTo("level",level).fetch()
       .then(function(TestDataClass){
-        TestDataClass.set("rent", "貸出中")
+        TestDataClass.set("state", "貸出中")
         return TestDataClass.update();
       })
       .then(function(results){
