@@ -44,6 +44,17 @@ input {
   background-color: rgb(53, 82, 160);
 }
 
+.btn3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 16pt;
+  height: 4ex;
+  width: 5em;
+  border-radius: 10px;
+  color: white;
+  background-color: rgb(82, 115, 206);
+}
+
 #message {
   border-style: solid;
   border-color: grey;
