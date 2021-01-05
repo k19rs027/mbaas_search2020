@@ -124,6 +124,22 @@
       })
     }
 
+     function updateData3(){
+       let level = parseInt($("#level").val(),10);
+      let TestDataClass = ncmb.DataStore(db);
+      TestDataClass.equalTo("level",level).fetch()
+      .then(function(TestDataClass){
+        TestDataClass.set("state", "貸出中")
+        return TestDataClass.update();
+      })
+      .then(function(results){
+        $("#message").html("update success");
+      })
+      .catch(function(error){
+        $("#display").html("update fail:" + JSON.stringify(error));
+      })
+    }
+
     </script>
 </head>
 <body>
