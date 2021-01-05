@@ -1,9 +1,10 @@
 /**/
 body {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(182, 204, 245);
 }
 h1 {
-  background-color: yellow;
+  background-color: rgb(81, 104, 144);
+  color: white;
 }
 
 label {
@@ -29,7 +30,7 @@ input {
   width: 5em;
   border-radius: 10px;
   color: white;
-  background-color: blue;
+  background-color: rgb(5, 34, 114);
 }
 
 #message {
