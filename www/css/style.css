@@ -33,6 +33,17 @@ input {
   background-color: rgb(5, 34, 114);
 }
 
+.btn2 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 16pt;
+  height: 4ex;
+  width: 5em;
+  border-radius: 10px;
+  color: white;
+  background-color: rgb(53, 82, 160);
+}
+
 #message {
   border-style: solid;
   border-color: grey;
